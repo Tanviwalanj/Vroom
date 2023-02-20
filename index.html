@@ -15,29 +15,16 @@
 				<h1 class="channel-title"></h1> <!-- The channel title will be inserted inside this h1. -->
 			</a>
 			<div class="channel-description"></div> <!-- Same here for the channel description. -->
-			<ul class="channel-owner channel-collaborator"></ul> <!-- Owner and collaborators. -->
 		</section>
+		
 		<section>
-			<h2 class="channel-count"></h2> <!-- How many blocks. -->
 			<!-- All the channel “blocks” will be created as children, here. -->
 			<!-- You could move the classes to different section elements to separate the types! -->
-			<div class="content">
-			<div class="slider">
-			  <div>
-				<div class="image">
-				  <img src="" alt="">
-				</div> <!-- end image -->
-			  </div>
-			  <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-				<span class="slider__label sr-only">
-			  </div>
-			</span>
-		  </div> 
+			<!-- Carousel -->
+					
 			<ul class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks">
 			</ul>
 		</section>
-
-		<!-- Carousel -->
 
 		<!-- These are the templates for the various block types, below. -->
 		<!-- You can move/nest/remove any of the insertion points! -->
@@ -70,7 +57,6 @@
 					<picture>
 						<source class="image-thumb"> <!-- You will have to add the `media` if you want to use these. -->
 						<source class="image-square">
-						<source class="image-display">
 						<img class="image"> <!-- Largest image/cover source inserts here. -->
 					</picture>
 					<div class="embed"></div> <!-- Embed iframe inserts here. -->

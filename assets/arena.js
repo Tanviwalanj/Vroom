@@ -232,7 +232,7 @@ fetch(`https://api.are.na/v2/channels/${channel}?per=100`, {cache: 'no-store'})
 		var h = date.getHours(); // 0 - 23
 		var m = date.getMinutes(); // 0 - 59
 		var s = date.getSeconds(); // 0 - 59
-		var session = "AM";
+		var session = "";
 		
 		if(h == 0){
 			h = 12;
@@ -240,7 +240,7 @@ fetch(`https://api.are.na/v2/channels/${channel}?per=100`, {cache: 'no-store'})
 		
 		if(h > 12){
 			h = h - 12;
-			session = "PM";
+			session = "";
 		}
 		
 		h = (h < 10) ? "0" + h : h;
@@ -259,24 +259,7 @@ fetch(`https://api.are.na/v2/channels/${channel}?per=100`, {cache: 'no-store'})
 
 	// Carousel
 
-	$(document).ready(function() {
-		var $slider = $('.slider');
-		var $progressBar = $('.progress');
-		var $progressBarLabel = $( '.slider__label' );
-		
-		$slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
-		  var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
-		  
-		  $progressBar
-			.css('background-size', calc + '% 100%')
-			.attr('aria-valuenow', calc );
-		  
-		  $progressBarLabel.text( calc + '% completed' );
-		});
-		
-		$slider.slick({
-		  slidesToShow: 3,
-		  slidesToScroll: 1,
-		  speed: 400
-		});  
+	$('input').on('change', function() {
+		$('body').toggleClass('blue');
 	  });
+	

@@ -8,6 +8,7 @@
 		<script defer src="assets/arena.js"></script>
 	</head>
 	<body>
+		<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
 		<section>
 			<!-- Replace this URL with your channel to connect the API! -->
 			<a href="https://www.are.na/andre-magracia-lu0sehgfuwy/vroom-z-osugxs5lq" id="channel-url"> 
@@ -20,14 +21,30 @@
 			<h2 class="channel-count"></h2> <!-- How many blocks. -->
 			<!-- All the channel “blocks” will be created as children, here. -->
 			<!-- You could move the classes to different section elements to separate the types! -->
+			<div class="content">
+			<div class="slider">
+			  <div>
+				<div class="image">
+				  <img src="" alt="">
+				</div> <!-- end image -->
+			  </div>
+			  <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+				<span class="slider__label sr-only">
+			  </div>
+			</span>
+		  </div> 
 			<ul class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks">
 			</ul>
 		</section>
+
+		<!-- Carousel -->
+
 		<!-- These are the templates for the various block types, below. -->
 		<!-- You can move/nest/remove any of the insertion points! -->
 		<!-- For example, you could only show images for actual image blocks. -->
 		<!-- You could not show the type if you group them by section, above. -->
 		<!-- Template for the channel owner. -->
+
 		<template id="channel-owner">
 			<li>
 				<img class="avatar"> <!-- Avatar image source inserts here. -->

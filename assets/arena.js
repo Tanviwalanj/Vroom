@@ -224,3 +224,59 @@ fetch(`https://api.are.na/v2/channels/${channel}?per=100`, {cache: 'no-store'})
 		parseBlocks(data)
 	})
 
+
+	// Clock
+
+	function showTime(){
+		var date = new Date();
+		var h = date.getHours(); // 0 - 23
+		var m = date.getMinutes(); // 0 - 59
+		var s = date.getSeconds(); // 0 - 59
+		var session = "AM";
+		
+		if(h == 0){
+			h = 12;
+		}
+		
+		if(h > 12){
+			h = h - 12;
+			session = "PM";
+		}
+		
+		h = (h < 10) ? "0" + h : h;
+		m = (m < 10) ? "0" + m : m;
+		s = (s < 10) ? "0" + s : s;
+		
+		var time = h + ":" + m + ":" + s + " " + session;
+		document.getElementById("MyClockDisplay").innerText = time;
+		document.getElementById("MyClockDisplay").textContent = time;
+		
+		setTimeout(showTime, 1000);
+		
+	}
+	
+	showTime();
+
+	// Carousel
+
+	$(document).ready(function() {
+		var $slider = $('.slider');
+		var $progressBar = $('.progress');
+		var $progressBarLabel = $( '.slider__label' );
+		
+		$slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
+		  var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+		  
+		  $progressBar
+			.css('background-size', calc + '% 100%')
+			.attr('aria-valuenow', calc );
+		  
+		  $progressBarLabel.text( calc + '% completed' );
+		});
+		
+		$slider.slick({
+		  slidesToShow: 3,
+		  slidesToScroll: 1,
+		  speed: 400
+		});  
+	  });

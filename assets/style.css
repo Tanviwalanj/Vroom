@@ -145,7 +145,7 @@ a { color: #FD6320; }
 	font-size: 100px;
 	max-width: 1000px;
 	position: absolute;
-	top: 35%;}
+	top: 25%;}
 
 
 .image-block .title{color: #FD6320;
@@ -198,12 +198,13 @@ body {
     .grid-container {
         display: grid;
         grid-template-columns: auto auto auto auto;
+        column-gap: 10px;
+        margin-top: 30%;
       }
       
     .grid-item {
         background-color: rgba(255, 255, 255, 0.8);
         border: 1px solid rgba(0, 0, 0, 0.8);
-
         text-align: center;
     }
 

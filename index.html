@@ -5,6 +5,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="assets/reset.css" rel="stylesheet">
 		<link href="assets/style.css" rel="stylesheet">
+<!-- Slick 
+		<link rel="stylesheet" type="text/css" href="assets/slick.css">
+<script type="text/javascript" src="assets/slick.min.js"></script> -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
 		<script defer src="assets/arena.js"></script>
 	</head>
 	<body>
@@ -17,38 +24,55 @@
 			<div class="channel-description"></div> <!-- Same here for the channel description. -->
 		</section>
 		
-		<section>
+		<section class="grid-container" >
 			<!-- All the channel “blocks” will be created as children, here. -->
 			<!-- You could move the classes to different section elements to separate the types! -->
-			<!-- Carousel -->
-					
-			<ul class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks">
-			</ul>
+<!-- Images. -->
+<!--<div class="carousel-container">
+    <div class="slick-carousel">-->
+
+	<template id="image-block">
+	  <div>
+		<figure class="image-block grid-item">
+			<h3 class="title"></h3>
+                <picture>
+                    <source class="image-square">
+                    <source class="image-display">
+                    <img class="image">
+                </picture>
+                <a class="link">
+                    <p class="link-title"></p>
+                </a>
+                <figcaption class="description"></figcaption>
+                <p class="time-updated"></p>
+                <p class="time-created"></p>
+		</figure>
+	</template>
+	<ul id="channel-blocks" class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks"></ul>
+
+	<h3 class="title"></h3>
+                <picture>
+                    <source class="image-square">
+                    <source class="image-display">
+                    <img class="image">
+                </picture>
+                <a class="link">
+                    <p class="link-title"></p>
+                </a>
+                <figcaption class="description"></figcaption>
+                <p class="time-updated"></p>
+                <p class="time-created"></p>
+  </div>
+</div>
+
+
 		</section>
 
 		<!-- These are the templates for the various block types, below. -->
 		<!-- You can move/nest/remove any of the insertion points! -->
 		<!-- For example, you could only show images for actual image blocks. -->
 		<!-- You could not show the type if you group them by section, above. -->
-		<!-- Template for the channel owner. -->
 
-		<template id="channel-owner">
-			<li>
-				<img class="avatar"> <!-- Avatar image source inserts here. -->
-				<a class="link"> <!-- Link to their profile inserts here. -->
-					<p class="full-name"></p> <!-- Username inserts here. -->
-				</a>
-			</li>
-		</template>
-		<!-- And collaborator. -->
-		<template id="channel-collaborator">
-			<li>
-				<img class="avatar">
-				<a class="link">
-					<p class="full-name"></p>
-				</a>
-			</li>
-		</template>
  		<!-- Spotify, Soundcloud, etc. -->
 		<template id="audio-embed-block">
 			<li>
@@ -84,26 +108,6 @@
 					<audio class="audio" controls></audio> <!-- Audio source inserts here. -->
 					<figcaption class="description"></figcaption>
 					<p class="type"></p>
-					<p class="time-updated"></p>
-					<p class="time-created"></p>
-				</figure>
-			</li>
-		</template>
-		<!-- Images. -->
-		<template id="image-block"> 
-			<li>
-				<figure class="image-block">
-					<h3 class="title"></h3>
-					<picture>
-						<source class="image-thumb">
-						<source class="image-square">
-						<source class="image-display">
-						<img class="image">
-					</picture>
-					<a class="link">
-						<p class="link-title"></p>
-					</a>
-					<figcaption class="description"></figcaption>
 					<p class="time-updated"></p>
 					<p class="time-created"></p>
 				</figure>
@@ -205,5 +209,33 @@
 				</figure>
 			</li>
 		</template>
+
+		<script>
+			$(document).ready(function() {
+    $('.slick-carousel').slick({
+        slidesToShow: 3, // Number of slides to show at once
+        slidesToScroll: 1, // Number of slides to scroll at once
+        autoplay: true, // Autoplay the carousel
+        autoplaySpeed: 2000, // Autoplay speed in milliseconds
+        responsive: [
+            {
+                breakpoint: 768, // If screen size is less than 768px
+                settings: {
+                    slidesToShow: 2 // Show 2 slides
+                }
+            },
+            {
+                breakpoint: 480, // If screen size is less than 480px
+                settings: {
+                    slidesToShow: 1 // Show 1 slide
+                }
+            }
+        ]
+    });
+});
+
+		  </script>
+		  
 	</body>
+
 </html>

@@ -137,13 +137,12 @@ a { color: #FD6320; }
 	font-style: normal;
 	font-size: 30px;
 	position: absolute;
-	top: 0%;
    }
 
 .channel-description {font-family: pp_telegrafultralight;
 	font-style: normal;
 	font-size: 100px;
-	max-width: 1000px;
+	max-width: 100px;
 	position: absolute;
 	top: 25%;}
 
@@ -151,14 +150,35 @@ a { color: #FD6320; }
 .image-block .title{color: #FD6320;
 }
 
+.image-block {width: 300px;
+    height: 300px;
+	 }
 
-img {
-	width: 30%;
-	height: 50%;
+.image {
+    padding: 5px;
+    width: 300px;
 	border-radius: 10px;
 	object-fit: cover;
 	box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
   }
+  .image-square {
+    padding: 5px;
+    width: 300px;
+	border-radius: 10px;
+	object-fit: cover;
+	box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  }
+
+  .image-display {
+    padding: 5px;
+    width: 300px;
+	border-radius: 10px;
+	object-fit: cover;
+	box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  }
+
+  
+
 
 .video-embed-block .image{
 	width: 30%;
@@ -195,13 +215,13 @@ body {
 
     /*Carousel */
 
-    .grid-container {
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        column-gap: 10px;
-        margin-top: 30%;
-      }
-      
+    ul {
+    display: grid;
+    grid-template-rows: 1fr;
+    column-gap: 10px;
+    grid-auto-flow: column;
+}
+    
     .grid-item {
         background-color: rgba(255, 255, 255, 0.8);
         border: 1px solid rgba(0, 0, 0, 0.8);

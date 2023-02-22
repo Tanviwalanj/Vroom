@@ -5,18 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="assets/reset.css" rel="stylesheet">
 		<link href="assets/style.css" rel="stylesheet">
-<!-- Slick 
-		<link rel="stylesheet" type="text/css" href="assets/slick.css">
-<script type="text/javascript" src="assets/slick.min.js"></script> 
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> -->
-
 		<script defer src="assets/arena.js"></script>
 	</head>
 	<body>
 		<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-
+	
 		<section>
 			<!-- Replace this URL with your channel to connect the API! -->
 			<a href="https://www.are.na/andre-magracia-lu0sehgfuwy/vroom-z-osugxs5lq" id="channel-url"> 
@@ -25,13 +18,9 @@
 			<div class="channel-description"></div> <!-- Same here for the channel description. -->
 		</section>
 		
-		<section class="grid-container" >
-			<!-- All the channel “blocks” will be created as children, here. -->
-			<!-- You could move the classes to different section elements to separate the types! -->
+	<section class="grid-container" >
 <!-- Images. -->
-<!--<div class="carousel-container">
-    <div class="slick-carousel">-->
-
+	<ul id="channel-blocks" class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks"></ul>
 	<template id="image-block">
 	  <div>
 		<figure class="image-block grid-item">
@@ -48,26 +37,10 @@
                 <p class="time-updated"></p>
                 <p class="time-created"></p>
 		</figure>
-	</template>
-	<ul id="channel-blocks" class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks"></ul>
-
-	<h3 class="title"></h3>
-                <picture>
-                    <source class="image-square">
-                    <source class="image-display">
-                    <img class="image">
-                </picture>
-                <a class="link">
-                    <p class="link-title"></p>
-                </a>
-                <figcaption class="description"></figcaption>
-                <p class="time-updated"></p>
-                <p class="time-created"></p>
-  </div>
+	</template>	
 </div>
-
-
 		</section>
+
 
 		<!-- These are the templates for the various block types, below. -->
 		<!-- You can move/nest/remove any of the insertion points! -->

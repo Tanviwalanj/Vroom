@@ -1,3 +1,4 @@
+// The Description is returned as Markdown, of course.
 let markdownIt = document.createElement('script')
 markdownIt.src = 'https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.3.2/markdown-it.min.js'
 document.head.appendChild(markdownIt)
@@ -221,6 +222,7 @@ fetch(`https://api.are.na/v2/channels/${channel}?per=100`, {cache: 'no-store'})
 	.then(data => {
 		setBasics(data)
 		parseBlocks(data)
+		window.arenaCallback?.()
 	})
 
 

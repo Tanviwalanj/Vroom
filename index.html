@@ -8,14 +8,15 @@
 		<script defer src="assets/arena.js"></script>
 	</head>
 	<body>
-		<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
 	
 		<section>
 			<!-- Replace this URL with your channel to connect the API! -->
 			<a href="https://www.are.na/andre-magracia-lu0sehgfuwy/vroom-z-osugxs5lq" id="channel-url"> 
-				<h1 class="channel-title"></h1> <!-- The channel title will be inserted inside this h1. -->
+				<h1 class="channel-title"></h1>
+				<div id="MyClockDisplay" class="clock" onload="showTime()"></div> <!-- The channel title will be inserted inside this h1. -->
 			</a>
 			<div class="channel-description"></div> <!-- Same here for the channel description. -->
+		</div> 
 		</section>
 		
 	<section class="grid-container" >
@@ -24,7 +25,6 @@
 	<template id="image-block">
 	  <div>
 		<figure class="image-block grid-item">
-			<h3 class="title"></h3>
                 <picture>
                     <source class="image-square">
                     <source class="image-display">
@@ -34,8 +34,6 @@
                     <p class="link-title"></p>
                 </a>
                 <figcaption class="description"></figcaption>
-                <p class="time-updated"></p>
-                <p class="time-created"></p>
 		</figure>
 	</template>	
 </div>
@@ -63,8 +61,6 @@
 					</a>
 					<figcaption class="description"></figcaption> <!-- Block description inserts here. -->
 					<p class="type"></p> <!-- Block type/kind inserts here. -->
-					<p class="time-updated"></p> <!-- When it was last updated. -->
-					<p class="time-created"></p> <!-- And first created. -->
 				</figure>
 			</li>
 		</template>
@@ -82,8 +78,6 @@
 					<audio class="audio" controls></audio> <!-- Audio source inserts here. -->
 					<figcaption class="description"></figcaption>
 					<p class="type"></p>
-					<p class="time-updated"></p>
-					<p class="time-created"></p>
 				</figure>
 			</li>
 		</template>
@@ -103,8 +97,6 @@
 					</a>
 					<figcaption class="description"></figcaption>
 					<p class="type"></p>
-					<p class="time-updated"></p>
-					<p class="time-created"></p>
 				</figure>
 			</li>
 		</template>
@@ -124,8 +116,6 @@
 					</a>
 					<figcaption class="description"></figcaption>
 					<p class="type"></p>
-					<p class="time-updated"></p>
-					<p class="time-created"></p>
 				</figure>
 			</li>
 		</template>
@@ -137,8 +127,6 @@
 					<div class="content"></div> <!-- Text blocks insert their HTML here. -->
 					<figcaption class="description"></figcaption>
 					<p class="type"></p>
-					<p class="time-updated"></p>
-					<p class="time-created"></p>
 				</figure>
 			</li>
 		</template>
@@ -159,8 +147,6 @@
 					</a>
 					<figcaption class="description"></figcaption>
 					<p class="type"></p>
-					<p class="time-updated"></p>
-					<p class="time-created"></p>
 				</figure>
 			</li>
 		</template>
@@ -177,38 +163,9 @@
 					</picture>
 					<video class="video" controls></video> <!-- Video source inserts here. -->
 					<figcaption class="description"></figcaption>
-					<p class="type"></p>
-					<p class="time-updated"></p>
-					<p class="time-created"></p>
 				</figure>
 			</li>
 		</template>
-
-		<script>
-			$(document).ready(function() {
-    $('.slick-carousel').slick({
-        slidesToShow: 3, // Number of slides to show at once
-        slidesToScroll: 1, // Number of slides to scroll at once
-        autoplay: true, // Autoplay the carousel
-        autoplaySpeed: 2000, // Autoplay speed in milliseconds
-        responsive: [
-            {
-                breakpoint: 768, // If screen size is less than 768px
-                settings: {
-                    slidesToShow: 2 // Show 2 slides
-                }
-            },
-            {
-                breakpoint: 480, // If screen size is less than 480px
-                settings: {
-                    slidesToShow: 1 // Show 1 slide
-                }
-            }
-        ]
-    });
-});
-
-		  </script>
 		  
 	</body>
 

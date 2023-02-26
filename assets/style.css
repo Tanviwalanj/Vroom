@@ -112,7 +112,7 @@
 
 :root {
     --channel-title: 20px;
-    --channel-description: calc(var(--channel-title)*2.11);
+    --channel-description: calc(var(--channel-title)*2.5);
     --clock: calc(var(--channel-title));
     --smallspacing: 200px;
 }
@@ -126,7 +126,7 @@
     }}
 
 .small{
-        margin-bottom: var(--smallspacing);
+        margin-right: var(--smallspacing);
       }
 
 
@@ -147,8 +147,8 @@ a { color: #FD6320; }
  /*Clock */
 .clock {
     position: fixed;
-    top: 0%;
-    left: 83%;
+    top: 1%;
+    right: 2%;
     margin-right: var(--smallspacing);
     transform: translateX(20%) translateY(20%);
     font-size: var(--clock);

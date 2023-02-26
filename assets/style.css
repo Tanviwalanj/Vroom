@@ -212,7 +212,7 @@ ul {
     bottom: 0;
     transition: background 0.15s ease;
   }
-  
+
 .progress {
     position: fixed;
     bottom: 0;
@@ -222,6 +222,7 @@ ul {
     background: white;
     z-index: 1;  
   }
+
 
 .progress .bar {
     height: 100%;

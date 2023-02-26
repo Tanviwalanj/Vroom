@@ -114,6 +114,7 @@
     --channel-title: 20px;
     --channel-description: calc(var(--channel-title)*2.11);
     --clock: calc(var(--channel-title));
+    --smallspacing: 200px;
 }
 
 @media (min-width: 768px) {
@@ -121,8 +122,12 @@
     --channel-title: 30px;
     --channel-description: calc(var(--channel-title)*3.2);
     --clock: calc(var(--channel-title));
+    --smallspacing: 32px;
     }}
 
+.small{
+        margin-bottom: var(--smallspacing);
+      }
 
 
 
@@ -144,6 +149,7 @@ a { color: #FD6320; }
     position: fixed;
     top: 0%;
     left: 83%;
+    margin-right: var(--smallspacing);
     transform: translateX(20%) translateY(20%);
     font-size: var(--clock);
 	color: #FD6320;

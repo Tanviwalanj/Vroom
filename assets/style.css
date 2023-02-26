@@ -110,12 +110,29 @@
 
 /*Typefaces above*/
 
+:root {
+    --channel-title: 20px;
+    --channel-description: calc(var(--channel-title)*2.11);
+    --clock: calc(var(--channel-title));
+}
+
+@media (min-width: 768px) {
+    :root {
+    --channel-title: 30px;
+    --channel-description: calc(var(--channel-title)*3.2);
+    --clock: calc(var(--channel-title));
+    }}
+
+
+
+
+
 a { color: #FD6320; }
  
 /*Title */
 .channel-title {font-family: pp_telegrafultrabold_oblique;
 	font-style: normal;
-	font-size: 30px;
+	font-size: var(--channel-title);
 	position: fixed;
     top: 1%;
     line-height: 1.5;
@@ -128,7 +145,7 @@ a { color: #FD6320; }
     top: 0%;
     left: 83%;
     transform: translateX(20%) translateY(20%);
-    font-size: 30px;
+    font-size: var(--clock);
 	color: #FD6320;
     font-family: pp_telegrafultrabold_oblique;
     letter-spacing: 7px;
@@ -137,7 +154,7 @@ a { color: #FD6320; }
 /*Description */
 .channel-description {font-family: pp_telegrafultralight;
 	font-style: normal;
-	font-size: 100px;
+	font-size: var(--channel-description);
 	max-width: 70%;
 	position: absolute;
     margin-left: 10%;
@@ -222,7 +239,6 @@ ul {
     background: white;
     z-index: 1;  
   }
-
 
 .progress .bar {
     height: 100%;

@@ -258,4 +258,38 @@ fetch(`https://api.are.na/v2/channels/${channel}?per=100`, {cache: 'no-store'})
 	
 	showTime();
 
-	// Carousel
+// Sticky
+
+	const stickyTarget = document.querySelector('.sticky-target');
+const stickyWrapper = document.querySelector('.sticky-wrapper');
+
+const stickyWatch = (entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) { stickyWrapper.classList.add('stuck') } 
+    else { stickyWrapper.classList.remove('stuck') }
+  });
+};
+const observer = new IntersectionObserver(stickyWatch);
+observer.observe(stickyTarget);
+
+// Progress Bar
+
+function progress() {
+
+	var windowScrollTop = $(window).scrollTop();
+	var docHeight = $(document).height();
+	var windowHeight = $(window).height();
+	var progress = (windowScrollTop / (docHeight - windowHeight)) * 100;
+	var $bgColor = progress > 99 ? '#4db792' : '#EF4E31';
+	var $textColor = progress > 99 ? '#fff' : '#333';
+  
+	$('.progress .bar').width(progress + '%').css({ backgroundColor: $bgColor });
+	$('h1').text(Math.round(progress) + '%').css({ color: $textColor });
+	$('.fill').height(progress + '%').css({ backgroundColor: $bgColor });
+  }
+  
+  progress();
+  
+  $(document).on('scroll', progress);
+
+  

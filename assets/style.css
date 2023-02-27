@@ -282,4 +282,11 @@ ul {
         margin-left: 2%;
     }
   }
+
+/* Responsive layout - clock */
+@media (max-width: 800px) {
+    .clock{
+        margin-left: 15%;
+    }
+  }
   

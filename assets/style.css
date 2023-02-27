@@ -286,7 +286,7 @@ ul {
 /* Responsive layout - clock */
 @media (max-width: 800px) {
     .clock{
-        margin-left: 70px;
+        right: 30%;
     }
   }
   

@@ -252,3 +252,34 @@ ul {
     background: #FD6320;
     transition: background 0.15s ease;
   }
+
+/* Responsive layout - percent fill */
+@media (max-width: 800px) {
+    .percent {
+      height: 10px;
+      width: 300px; 
+    }
+  }
+  
+  /* Responsive layout - progress bar */
+  @media (max-width: 800px) {
+    .progress .bar{
+        height: 60%;
+        width: 10%; 
+    }
+  }
+
+/* Responsive layout - image settings */
+   @media (max-width: 800px) {
+    #channel-blocks{
+        margin-left: 400px;
+    }
+  }
+
+/* Responsive layout - description */
+  @media (max-width: 800px) {
+    .channel-description{
+        margin-left: 2%;
+    }
+  }
+  

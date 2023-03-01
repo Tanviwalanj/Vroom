@@ -372,6 +372,52 @@ ul {
     }
   }
 
+  /* Meter*/
+  
+  .chart{padding: 10px 30px;
+    border-radius: 1px;
+    position: relative;
+    display: block;
+    width: 300px;
+    margin-left: 576px;
+  margin-top: -165px; 
+position:fixed;}
+  
+  #needle {
+    position:fixed;
+    left: 47%;
+    top: -4%;
+    transform-origin: 50% calc(100% - 15px);
+    transform: rotate(-110deg);
+    fill: aliceblue;
+  
+    animation: rotate 5s ease-in-out alternate infinite;
+  }
+  
+  @keyframes rotate {
+    to {
+      transform: rotate(20deg);
+    }
+  }
+  
+  svg {
+    margin: -100;
+    max-width: 30%;
+  }
+  
+  .meter h3 {
+    display: block;
+    text-align: center;
+    margin-top: -130px;
+    font-family: Arial;
+  }
+
+  /* Responsive layout - clock */
+@media (max-width: 800px) {
+  #needle{
+      margin-top: -100%;
+  }
+}
 
 
   

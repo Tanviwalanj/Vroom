@@ -108,7 +108,8 @@
 
 }
 
-/*Typefaces above*/
+
+/*Type */
 
 :root {
     --channel-title: 20px;
@@ -201,7 +202,7 @@ body {
   font-family: pp_telegrafultralight;
 }
 
-    /*Carousel */
+    /*Image Grid*/
 
 ul {
     display: grid;
@@ -289,4 +290,88 @@ ul {
         left: 65%;
     }
   }
-  
+
+
+  /*Slideshow*/
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1200px;
+  position: absolute;
+	
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation 
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+*/
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/*Typefaces above*/
+
+@media screen and (max-width: 768px) {
+  .carousel-wrapper {
+    width: 3012px;
+    height: 410px;
+  }
+
+  .carousel-container {
+    width: 840px;
+    height: 150px;
+  }
+
+  .carousel {
+    width: 1020px;
+  }
+  .carousel > div {
+    width: 240px;
+    height: 150px;
+  }
+
+  @keyframes sliding {
+    30% {
+      transform: translateX(0);
+    }
+    35% {
+      transform: translateX(-240px);
+    }
+    65% {
+      transform: translateX(-240px);
+    }
+    70% {
+      transform: translateX(-480px);
+    }
+    98% {
+      transform: translateX(-480px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}

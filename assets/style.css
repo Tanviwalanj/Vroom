@@ -208,11 +208,10 @@
       }
 
 
-
+/*Title */
 
 a { color: #FD6320; }
  
-/*Title */
 .channel-title {font-family: pp_telegrafultrabold_oblique;
 	font-style: normal;
 	font-size: var(--channel-title);
@@ -374,4 +373,5 @@ ul {
   }
 
 
- 
+
+  

@@ -108,12 +108,89 @@
 
 }
 
+ /*Slideshow*/
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1200px;
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 5%;
+	
+}
+
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation 
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+*/
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/*Typefaces above*/
+
+@media screen and (max-width: 768px) {
+  .carousel-wrapper {
+    width: 1012px;
+    height: 210px;
+  }
+
+  .carousel-container {
+    width: 640px;
+    height: 150px;
+  }
+
+  .carousel {
+    width: 720px;
+  }
+  .carousel > div {
+    width: 240px;
+    height: 150px;
+  }
+
+  @keyframes sliding {
+    30% {
+      transform: translateX(0);
+    }
+    35% {
+      transform: translateX(-240px);
+    }
+    65% {
+      transform: translateX(-240px);
+    }
+    70% {
+      transform: translateX(-480px);
+    }
+    98% {
+      transform: translateX(-480px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+
 
 /*Type */
 
 :root {
     --channel-title: 20px;
-    --channel-description: calc(var(--channel-title)*2.5);
+    --channel-description: calc(var(--channel-title)*2);
     --clock: calc(var(--channel-title));
     --smallspacing: 200px;
 }
@@ -121,7 +198,7 @@
 @media (min-width: 768px) {
     :root {
     --channel-title: 30px;
-    --channel-description: calc(var(--channel-title)*3.2);
+    --channel-description: calc(var(--channel-title)*1);
     --clock: calc(var(--channel-title));
     --smallspacing: 32px;
     }}
@@ -159,13 +236,13 @@ a { color: #FD6320; }
 }
 
 /*Description */
-.channel-description {font-family: pp_telegrafultralight;
+.channel-description {font-family: pp_telegrafultralight_slanted;
 	font-style: normal;
 	font-size: var(--channel-description);
-	max-width: 70%;
+  color: #535353;
 	position: absolute;
-    margin-left: 10%;
-	top: 30%;}
+  margin-left: 8%;
+	top: 14%;}
 
 .image-block .title{color: #FD6320;
 }
@@ -179,8 +256,9 @@ a { color: #FD6320; }
     padding: 5px;
     width: 500px;
 	border-radius: 10px;
+  border-color: rgb(106, 115, 123);
 	object-fit: cover;
-	box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+	box-shadow: 0px 0px 5px 0px rgba(211, 209, 209, 0.47);
   }
 
 .video-embed-block .image{
@@ -188,7 +266,7 @@ a { color: #FD6320; }
 	height: 50%;
 	border-radius: 10px;
 	object-fit: cover;
-	box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+	box-shadow: 0px 0px 5px 0px rgba(172, 172, 172, 0.47);
   }
 
 
@@ -200,6 +278,7 @@ body {
   display: flex;
   padding: 150px 40px;
   font-family: pp_telegrafultralight;
+  background-color: black;
 }
 
     /*Image Grid*/
@@ -243,7 +322,7 @@ ul {
     left: 0;
     width: 100%;
     height: 20px;
-    background: white;
+    background: black;
     z-index: 1;  
   }
 
@@ -273,7 +352,7 @@ ul {
 /* Responsive layout - image settings */
    @media (max-width: 800px) {
     #channel-blocks{
-        margin-left: 400px;
+        margin-left: 500px;
     }
   }
 
@@ -292,86 +371,4 @@ ul {
   }
 
 
-  /*Slideshow*/
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1200px;
-  position: absolute;
-	
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: #717171;
-}
-
-/* Fading animation 
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-*/
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
-
-/*Typefaces above*/
-
-@media screen and (max-width: 768px) {
-  .carousel-wrapper {
-    width: 3012px;
-    height: 410px;
-  }
-
-  .carousel-container {
-    width: 840px;
-    height: 150px;
-  }
-
-  .carousel {
-    width: 1020px;
-  }
-  .carousel > div {
-    width: 240px;
-    height: 150px;
-  }
-
-  @keyframes sliding {
-    30% {
-      transform: translateX(0);
-    }
-    35% {
-      transform: translateX(-240px);
-    }
-    65% {
-      transform: translateX(-240px);
-    }
-    70% {
-      transform: translateX(-480px);
-    }
-    98% {
-      transform: translateX(-480px);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-}
+ 

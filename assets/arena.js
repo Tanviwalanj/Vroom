@@ -258,21 +258,6 @@ fetch(`https://api.are.na/v2/channels/${channel}?per=100`, {cache: 'no-store'})
 	
 	showTime();
 
-// Sticky
-// 	const stickyTarget = document.querySelector('.sticky-target');
-// const stickyWrapper = document.querySelector('.sticky-wrapper');
-
-// const stickyWatch = (entries) => {
-//   entries.forEach(entry => {
-//     if (!entry.isIntersecting) { stickyWrapper.classList.add('stuck') } 
-//     else { stickyWrapper.classList.remove('stuck') }
-//   });
-// };
-// const observer = new IntersectionObserver(stickyWatch);
-// observer.observe(stickyTarget);
-
-
-
 // Progress Bar
 
 function progress() {
